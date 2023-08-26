@@ -30,9 +30,9 @@ button_pressed = st.button("Run code interpreter", use_container_width=True)
 
 # This will display the images only when the button is pressed
 if button_pressed and input_text != "":
-    if sys.platform == "win32":
-        loop = asyncio.ProactorEventLoop()
-        asyncio.set_event_loop(loop)
-        loop.run_until_complete(get_images(input_text, files=uploaded_files_list))
-    else:
-        asyncio.run(get_images(input_text, files=uploaded_files_list))
+    # if sys.platform == "win32":
+    #     loop = asyncio.ProactorEventLoop()
+    #     asyncio.set_event_loop(loop)
+    #     loop.run_until_complete(get_images(input_text, files=uploaded_files_list))
+    # else:
+    asyncio.run(get_images(input_text, files=uploaded_files_list))
